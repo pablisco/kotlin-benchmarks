@@ -21,7 +21,7 @@ jmh {
 }
 
 jmhReport {
-    jmhResultPath = project.file('build/reports/jmh/result.json')
+    jmhResultPath = project.file('build/reports/jmh/results.json')
     jmhReportOutput = project.file('build/reports/jmh')
 }
 
