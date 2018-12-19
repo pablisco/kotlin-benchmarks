@@ -18,4 +18,5 @@ cache:
   - $HOME/.gradle/
 
 script:
-- ./gradlew clean build jmh jmhReport
+- ./gradlew clean build jmh
+- ./gradlew jmhReport
