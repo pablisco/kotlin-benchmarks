@@ -1,10 +1,7 @@
 package com.pablisco.kotlin.benchmarks
 
 import org.openjdk.jmh.annotations.*
-import java.util.concurrent.TimeUnit
 
-@BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
 open class LazyBenchmark {
 
     @Benchmark
