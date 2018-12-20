@@ -1,5 +1,11 @@
 # kotlin-benchmarks
 
+[![Build Status](https://travis-ci.org/pablisco/kotlin-benchmarks.svg?branch=master)](https://travis-ci.org/pablisco/kotlin-benchmarks)
+[![Results](https://img.shields.io/badge/JMH-Results-green.svg)](https://pablisco.com/kotlin-benchmarks/)
+
 A place to bench kotlin features and their options.
 
-Results: https://pablisco.com/kotlin-benchmarks/
+Tests so far:
+
+ - `by lazy`: Comparing all three threading options
+ - String formatting: Comparing the various options available to concatenate and format strings
