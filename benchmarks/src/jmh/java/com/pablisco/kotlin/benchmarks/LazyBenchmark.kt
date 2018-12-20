@@ -22,3 +22,15 @@ open class LazyBenchmark {
     }
 
 }
+
+class LazyNone {
+    val property by lazy(LazyThreadSafetyMode.NONE) { "Some irrelevant value" }
+}
+
+class LazySynchronized {
+    val property by lazy(LazyThreadSafetyMode.SYNCHRONIZED) { "Some irrelevant value" }
+}
+
+class LazyPublication {
+    val property by lazy(LazyThreadSafetyMode.PUBLICATION) { "Some irrelevant value" }
+}
