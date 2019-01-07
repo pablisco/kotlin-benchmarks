@@ -2,6 +2,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version "1.3.10"
     id 'me.champeau.gradle.jmh' version '0.4.7'
     id "io.morethan.jmhreport" version "0.9.0"
+    id "org.ajoberstar.git-publish" version "2.0.0"
 }
 
 repositories {
@@ -28,8 +29,15 @@ jmh {
 }
 
 jmhReport {
-    jmhResultPath = project.file('build/reports/jmh/results.json')
-    jmhReportOutput = project.file('build/reports/jmh')
+    jmhResultPath = file('build/reports/jmh/results.json')
+    jmhReportOutput = file('build/reports/jmh')
+}
+
+gitPublish {
+    repoUri = 'git@github.com:pablisco/kotlin-benchmarks.git'
+    branch = 'gh-pages'
+    repoDir = file("$buildDir/reports/jmh")
+    commitMessage = "Publishing benchmarks"
 }
 
 compileKotlin {

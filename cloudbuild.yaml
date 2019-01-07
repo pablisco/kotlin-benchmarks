@@ -3,3 +3,7 @@ steps:
   args: ['clean', 'build', 'jmh']
 - name: 'gcr.io/cloud-builders/gradle'
   args: ['jmhReport']
+- name: 'gcr.io/cloud-builders/gradle'
+  args: ['gitPublishPush']
+
+timeout: 3h
