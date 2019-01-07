@@ -1,9 +1,17 @@
 steps:
 - name: 'gcr.io/cloud-builders/gradle'
-  args: ['clean', 'build', 'jmh']
+  args: ['jmh', '--stacktrace']
+
 - name: 'gcr.io/cloud-builders/gradle'
-  args: ['jmhReport']
+  args: ['jmhReport', '--stacktrace']
+artifacts:
+  objects:
+    location: 'gs://[STORAGE_LOCATION]/kotlin-benchmarks/report'
+    paths: 'benchmarks/build/reports/jmh/**'
+
 - name: 'gcr.io/cloud-builders/gradle'
-  args: ['gitPublishPush']
+  args: ['gitPublishPush', '--stacktrace']
+
+
 
 timeout: 3h
