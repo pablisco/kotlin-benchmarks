@@ -11,4 +11,4 @@ timeout: 3h
 artifacts:
   objects:
     location: 'gs://[STORAGE_LOCATION]/kotlin-benchmarks/report'
-    paths: 'benchmarks/build/reports/jmh/**'
+    paths: ['benchmarks/build/reports/jmh/**']
