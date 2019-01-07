@@ -20,9 +20,11 @@ jmh {
     resultFormat = 'JSON'
     verbosity = 'EXTRA'
     iterations = 3
+    warmupIterations = 3
     timeUnit = 'ns'
     benchmarkMode = ['all']
     fork = 2
+    threads = 3
 }
 
 jmhReport {

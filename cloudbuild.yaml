@@ -1,0 +1,5 @@
+steps:
+- name: './gradlew'
+  args: ['clean', 'build', 'jmh']
+- name: './gradlew'
+  args: ['jmhReport']
