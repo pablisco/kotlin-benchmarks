@@ -1,5 +1,5 @@
 steps:
-- name: './gradlew'
+- name: 'gcr.io/cloud-builders/gradle'
   args: ['clean', 'build', 'jmh']
-- name: './gradlew'
+- name: 'gcr.io/cloud-builders/gradle'
   args: ['jmhReport']
