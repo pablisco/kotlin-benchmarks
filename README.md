@@ -9,3 +9,4 @@ Tests so far:
 
  - `by lazy`: Comparing all three threading options
  - String formatting: Comparing the various options available to concatenate and format strings
+ - For Loop: Comparing `for(i in range)`, `range.forEach {  }` and `range.forEachIndexed {}`
