@@ -1,6 +1,6 @@
 # kotlin-benchmarks
 
-[![Build Status](https://travis-ci.org/pablisco/kotlin-benchmarks.svg?branch=master)](https://travis-ci.org/pablisco/kotlin-benchmarks)
+[![Build Status](https://github.com/pablisco/kotlin-benchmarks/actions/workflows/main.yml/badge.svg)](https://github.com/pablisco/kotlin-benchmarks/actions)
 [![Results](https://img.shields.io/badge/JMH-Results-green.svg)](https://pablisco.com/kotlin-benchmarks/)
 
 A place to bench kotlin features and their options.
