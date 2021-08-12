@@ -19,11 +19,11 @@ dependencies {
 jmh {
     jvmArgsAppend = ["-Djmh.separateClasspathJAR=true", "-XX:+UseParallelGC"]
     resultFormat = "JSON"
-    verbosity = "EXTRA"
+    verbosity = "SILENT"
     iterations = 3
     warmupIterations = 3
     timeUnit = "ns"
-    benchmarkMode = ["all"]
+    benchmarkMode = ["avgt"]
     fork = 2
     threads = 3
 }
