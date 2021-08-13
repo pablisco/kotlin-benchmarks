@@ -22,7 +22,7 @@ jmh {
     iterations = 3
     warmupIterations = 1
     timeUnit = "ns"
-    benchmarkMode = ["avgt"]
+    benchmarkMode = ["all"]
     fork = 2
     threads = 4
 }
