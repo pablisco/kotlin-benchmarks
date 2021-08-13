@@ -5,18 +5,13 @@ import org.openjdk.jmh.annotations.*
 open class LazyBenchmark {
 
     @Benchmark
-    fun synchronisedLazy() {
-        checkNotNull(LazySynchronized().property)
-    }
+    fun synchronisedLazy(): String = LazySynchronized().property
 
     @Benchmark
-    fun publicationLazy() {
-        checkNotNull(LazyPublication().property)
-    }
+    fun publicationLazy(): String = LazyPublication().property
+
     @Benchmark
-    fun noneLazy() {
-        checkNotNull(LazyNone().property)
-    }
+    fun noneLazy(): String = LazyNone().property
 
 }
 
