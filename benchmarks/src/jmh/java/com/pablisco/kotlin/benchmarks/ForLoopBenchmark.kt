@@ -9,19 +9,19 @@ open class ForLoopBenchmark {
     @Benchmark
     @OperationsPerInvocation(numberOfIterations)
     fun loopFor(blackhole: Blackhole) {
-        for (i in 0 until numberOfIterations) { blackhole.consume(true) }
+        for (i in 0 until numberOfIterations) { blackhole.consume(i) }
     }
 
     @Benchmark
     @OperationsPerInvocation(numberOfIterations)
     fun loopForEach(blackhole: Blackhole) {
-        (0 until numberOfIterations).forEach { _ -> blackhole.consume(true) }
+        (0 until numberOfIterations).forEach { blackhole.consume(it) }
     }
 
     @Benchmark
     @OperationsPerInvocation(numberOfIterations)
     fun loopForEachIndexed(blackhole: Blackhole) {
-        (0 until numberOfIterations).forEachIndexed { _, _ -> blackhole.consume(true) }
+        (0 until numberOfIterations).forEachIndexed { _, index -> blackhole.consume(index) }
     }
 
 }
