@@ -6,11 +6,15 @@ import org.jetbrains.compose.web.attributes.*
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
+import io.ktor.client.*
+
+private val client = HttpClient()
 
 fun main() {
     var count: Int by mutableStateOf(0)
 
     renderComposable(rootElementId = "root") {
+        
         Div({ style { padding(25.px) } }) {
             Button(attrs = {
                 onClick { count -= 1 }

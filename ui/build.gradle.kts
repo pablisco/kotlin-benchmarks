@@ -19,6 +19,7 @@ kotlin {
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
+                implementation("io.ktor:ktor-client-core:1.6.2")
             }
         }
     }
