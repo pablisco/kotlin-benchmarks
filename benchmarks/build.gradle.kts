@@ -1,7 +1,7 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.5.21"
-    id("me.champeau.gradle.jmh") version "0.5.3"
-    id("io.morethan.jmhreport") version "0.9.0"
+    kotlin("jvm")
+    id("me.champeau.gradle.jmh")
+    id("io.morethan.jmhreport")
 }
 
 repositories {
@@ -9,7 +9,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
     jmh("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
     jmh("org.openjdk.jmh:jmh-core:1.33")
     jmh("org.openjdk.jmh:jmh-generator-annprocess:1.33")
